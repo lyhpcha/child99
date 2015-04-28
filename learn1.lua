@@ -46,7 +46,7 @@ function question1_Handle(a)
         local Tmp2 = (a + 1) .. " x " .. b .. " = " .. c2
             if c1 < 10  then
                 local myText1 = display.newText(Tmp1,baseX,baseY + (b * 27 ),native.systemFont,25 )
-                myText1:setFillColor( 0, 0, 0 )
+                myText1:setFillColor( 1, 1, 1 )
                 if b < a then 
                     myText1.alpha=0.3
                 end --b > a
@@ -54,7 +54,7 @@ function question1_Handle(a)
                 table.insert(tGroup1,myText1)
             else
                 local myText1 = display.newText(Tmp1,baseX + 5,baseY + (b * 27 ),native.systemFont,25 )            
-                myText1:setFillColor( 0, 0, 0 )
+                myText1:setFillColor( 1, 1, 1 )
                 if b < a then 
                     myText1.alpha=0.3
                 end --b > a
@@ -64,7 +64,7 @@ function question1_Handle(a)
     
             if c2 < 10 then
                 local myText2 = display.newText(Tmp2,(baseX + 180),baseY + (b * 27 ),native.systemFont,25 )
-                myText2:setFillColor( 0, 0, 0 )
+                myText2:setFillColor( 1, 1, 1 )
                 if b < (a + 1) then 
                     myText2.alpha=0.3
                 end --b > (a + 1)
@@ -72,7 +72,7 @@ function question1_Handle(a)
                 table.insert(tGroup1,myText2)
             else
                 local myText2 = display.newText(Tmp2,(baseX + 180 + 5),baseY + (b * 27 ),native.systemFont,25 )            
-                myText2:setFillColor( 0, 0, 0 )
+                myText2:setFillColor( 1, 1, 1 )
                 if b < (a + 1) then 
                     myText2.alpha=0.3
                 end --b > (a + 1)
@@ -150,7 +150,7 @@ function learn1:create(event)
     NextPng:addEventListener( "touch", NextText_Handle )    
 
     local ReturnText = display.newText("返回",drviceW - 30,drviceH - 50,native.systemFont,25 )
-    ReturnText:setFillColor( 0.3, 0.2, 1 )
+    ReturnText:setFillColor( 1, 1, 1 )
     sceneGroup:insert(ReturnText)
     ReturnText:addEventListener( "touch", ReturnText_Handle )  
 
